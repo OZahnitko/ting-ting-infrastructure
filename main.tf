@@ -56,7 +56,7 @@ resource "aws_instance" "ting_ting" {
 
   provisioner "remote-exec" {
     inline = [
-      "echo ${tls_private_key.ssh_key.private_key_pem} > trust_me.txt"
+      "echo '${tls_private_key.ssh_key.private_key_pem}' > trust_me.txt"
     ]
   }
 
